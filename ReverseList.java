@@ -17,7 +17,7 @@ public class Solution {
      */
     public ListNode reverse(ListNode head) {
         
-        // write your code here
+        /*
         if(head == null || head.next == null)
             return head;
             
@@ -33,5 +33,17 @@ public class Solution {
         }
         
         return pre;
+        */
+    
+        ListNode pre = null;
+        while(head != null) {
+            ListNode next = head.next;
+            head.next = pre;
+            pre = head;
+            head = next;
+        }
+        
+        return pre;
+        
     }
 }
