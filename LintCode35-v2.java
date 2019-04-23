@@ -17,30 +17,12 @@ public class Solution {
      */
     public ListNode reverse(ListNode head) {
         
-        /*
-        if(head == null || head.next == null)
-            return head;
-            
         ListNode pre = null;
-        ListNode tmp = head.next;
-        
         while(head != null) {
+            ListNode tmp = head.next;
             head.next = pre;
             pre = head;
             head = tmp;
-            if(tmp == null) break;
-            else    tmp = tmp.next;
-        }
-        
-        return pre;
-        */
-    
-        ListNode pre = null;
-        while(head != null) {
-            ListNode next = head.next;
-            head.next = pre;
-            pre = head;
-            head = next;
         }
         
         return pre;
